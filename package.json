@@ -1,8 +1,8 @@
 {
   "name": "vue-amap2.x",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "private": false,
-  "main": "lib/vue-amp2.x.umd.umd.min.js",
+  "main": "lib/vue-amp2.x.umd.min.js",
   "author": "just be free <justbefree@126.com>",
   "scripts": {
     "build:amap": "vue-cli-service build --mode production --target lib --name vue-amp2.x --dest lib src/amap/index.js",
