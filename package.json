@@ -1,0 +1,34 @@
+{
+  "name": "vue-amap2.x",
+  "version": "0.2.0",
+  "private": false,
+  "main": "lib/vue-amp2.x.umd.umd.min.js",
+  "author": "just be free <justbefree@126.com>",
+  "scripts": {
+    "build:amap": "vue-cli-service build --mode production --target lib --name vue-amp2.x --dest lib src/amap/index.js",
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "@amap/amap-jsapi-loader": "0.0.4",
+    "axios": "^0.20.0",
+    "core-js": "^3.6.5",
+    "qs": "^6.9.4",
+    "vue": "^2.6.11",
+    "yn-components": "^0.4.19"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.4.0",
+    "@vue/cli-plugin-eslint": "~4.4.0",
+    "@vue/cli-service": "~4.4.0",
+    "@vue/eslint-config-airbnb": "^5.0.2",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-vue": "^6.2.2",
+    "less": "^3.12.2",
+    "less-loader": "^6.2.0",
+    "vue-template-compiler": "^2.6.11"
+  }
+}
