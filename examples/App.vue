@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <VueAmap2x mapKey="ccd1e3a84dd69c646c53abd884db7141" v-on:moveend="handleMoveEnd" v-on:complete="handleMapLoaded" :center="center" v-on:zoomend="handleZoomEnd"></VueAmap2x>
+    <VueAmap2x :mapOptions="mapOptions" :plugins="plugins" v-on:pluginInstalled="handleGeolocation" mapKey="ccd1e3a84dd69c646c53abd884db7141" v-on:moveend="handleMoveEnd" v-on:complete="handleMapLoaded" :center="center" v-on:zoomend="handleZoomEnd"></VueAmap2x>
   </div>
 </template>
 
@@ -14,13 +14,42 @@ export default {
       map: null,
       vueInstance: null,
       center: [121.472644, 31.231706],
-      hotelMarkers: []
+      hotelMarkers: [],
+      plugins: ["AMap.Geolocation"],
+      mapOptions: {
+        mapStyle: "amap://styles/light",
+      }
     };
   },
   methods: {
     removeMarkers() {
       this.map.remove(this.hotelMarkers);
       this.hotelMarkers = [];
+    },
+    handleGeolocation({ AMap, map }) {
+      console.log("handleGeolocation", AMap, map);
+      const geolocation = new AMap.Geolocation({
+        // 是否使用高精度定位，默认：true
+        enableHighAccuracy: true,
+        // 设置定位超时时间，默认：无穷大
+        // timeout: 10000,
+        // 定位按钮的停靠位置的偏移量，默认：Pixel(10, 20)
+        buttonOffset: new AMap.Pixel(10, 20),
+        // 定位成功后调整地图视野范围使定位位置及精度范围视野内可见，默认：false
+        zoomToAccuracy: true,     
+        // 定位按钮的排放位置,  RB表示右下
+        buttonPosition: "RB"
+      });
+      geolocation.getCurrentPosition(function(status, result) {
+        if (status === "complete") {
+          console.log(result);
+          const { position } = result;
+          map.setCenter(position);
+          this.center = [position.lng, position.lat];
+        } else {
+          console.log(result);
+        }
+      });
     },
     addMarker(target) {
       const content = `
@@ -94,7 +123,7 @@ export default {
         QueryText: "",
         lang: "zh-CN",
         QueryType: 0,
-        authenticate: "NkNCNnltUVQzcFpHMFpUVTRCZ1FaR2hpa1BiYy9rTkhPWVd4TU9sSDJwL3VHVzV2SldWQzNtOHVjZzloZlBXUXcvMG9aYjE2MkhQaFZqR1RFNitZZlE9PQ==",
+        authenticate: "cWd2djlQYVE2TDhkbG5JeE5zKzlEVWpHZTlkV1o4VmlmWG1ESFR3OTAyY2NHUnlEMU83akdOeUNxTmJrbjJHSXdoak9RNWI3aGRHTWxBL09hQkpsMEE9PQ==",
         ...args
       };
       this.Indicator.open({
@@ -122,6 +151,10 @@ export default {
 </script>
 
 <style>
+*{
+  margin: 0;
+  padding: 0;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
