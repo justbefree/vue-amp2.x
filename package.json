@@ -4,6 +4,15 @@
   "private": false,
   "main": "lib/vue-amp2.x.umd.min.js",
   "author": "just be free <justbefree@126.com>",
+  "description": "高德地图js api 2.x版本 - Vue",
+  "bugs": {
+    "url": "https://github.com/justbefree/vue-amp2.x/issues"
+  },
+  "homepage": "https://github.com/justbefree/vue-amp2.x#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/justbefree/vue-amp2.x.git"
+  },
   "scripts": {
     "build:amap": "vue-cli-service build --mode production --target lib --name vue-amp2.x --dest lib src/amap/index.js",
     "serve": "vue-cli-service serve",
