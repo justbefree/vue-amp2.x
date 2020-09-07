@@ -2,7 +2,7 @@
 * @Author: Just be free
 * @Date:   2020-08-07 11:26:09
 * @Last Modified by:   Just be free
-* @Last Modified time: 2020-09-07 18:07:58
+* @Last Modified time: 2020-09-07 18:27:07
 * @E-mail: justbefree@126.com
 */
 import { loadMap } from '../load';
@@ -32,6 +32,10 @@ export default {
       default: () => {
         return {};
       }
+    },
+    autoDestroy: {
+      type: Boolean,
+      default: false
     }
   },
   data() {
@@ -123,7 +127,18 @@ export default {
     this.load({ key: mapKey, mapOptions });
   },
   destroyed() {
-    console.log("AMap should be destroyed");
+    const { autoDestroy } = this.$props;
+    if (autoDestroy) {
+      try {
+        this.map.destroy();
+        this.map = null;
+        console.log("AMap has been destroyed");
+      } catch (err) {
+        console.log(err);
+      }
+    } else {
+      console.log("AMap should be destroyed, you can simply set autoDestroy prop as true.");
+    }
   },
   render(h) {
     const defaultWidth = this.width || `${document.documentElement.clientWidth}px`;
