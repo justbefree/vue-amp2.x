@@ -2,7 +2,7 @@
 * @Author: Just be free
 * @Date:   2020-08-07 11:26:09
 * @Last Modified by:   Just be free
-* @Last Modified time: 2020-09-07 16:25:59
+* @Last Modified time: 2020-09-07 17:25:47
 * @E-mail: justbefree@126.com
 */
 import { loadMap } from '../load';
@@ -93,7 +93,6 @@ export default {
       const { key, mapOptions } = options;
       loadMap({ key }).then((AMap) => {
         const { center } = this;
-        console.log(center);
         const map = new AMap.Map('vue-amp2x-container', {
           zoom: 13,
           zooms: [10, 19],
