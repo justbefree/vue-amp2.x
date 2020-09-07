@@ -88,7 +88,6 @@ export default {
       if (vueInstance.getCurrentZoom() === map.getZoom() && window.AMap.GeometryUtil.distance(this.center, map.getCenter()) >= 500) {
         // console.log("两点之间的距离", AMap.GeometryUtil.distance(this.center, map.getCenter()));
         const center = map.getCenter();
-        // this.center = map.getCenter();
         this.center = [center.lng, center.lat];
         const Position = {
           Latitude: center.lat,
@@ -143,8 +142,8 @@ export default {
     },
     handleMapLoaded({ map, vueInstance }) {
       this.map = map;
+      // console.log("handleMapLoaded", map.getStatus());
       this.vueInstance = vueInstance;
-      this.requestHotels();
     }
   }
 };
