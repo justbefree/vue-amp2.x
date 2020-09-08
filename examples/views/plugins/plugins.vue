@@ -20,8 +20,10 @@
 </template>
 <script type="text/javascript">
   import { jscode, markupcode } from "./code";
+  import { prismjsMixins } from "../../mixins/prismjs";
   export default {
     name: "quickStart",
+    mixins: [prismjsMixins],
     data() {
       return {
         jscode,
