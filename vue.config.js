@@ -2,9 +2,10 @@
 * @Author: Just be free
 * @Date:   2020-09-04 11:11:59
 * @Last Modified by:   Just be free
-* @Last Modified time: 2020-09-04 14:26:15
+* @Last Modified time: 2020-09-08 09:54:21
 * @E-mail: justbefree@126.com
 */
+process.env.VUE_APP_VERSION = require('./package.json').version;
 module.exports = {
   devServer: {
     proxy: {

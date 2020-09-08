@@ -14,11 +14,16 @@
     "url": "https://github.com/justbefree/vue-amp2.x.git"
   },
   "scripts": {
-    "build:amap": "vue-cli-service build --mode production --target lib --name vue-amp2.x --dest lib src/amap/index.js",
+    "build:amap": "vue-cli-service build --mode production --target lib --name vue-amp2.x --dest lib src/index.js",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
+  "typings": "types/index.d.ts",
+  "files": [
+    "lib/*.js",
+    "types/*.d.ts"
+  ],
   "dependencies": {
     "@amap/amap-jsapi-loader": "0.0.4",
     "axios": "^0.20.0",

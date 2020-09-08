@@ -141,6 +141,7 @@ export default {
       })
     },
     handleMapLoaded({ map, vueInstance }) {
+      console.log("-------------", map.setCity);
       this.map = map;
       // console.log("handleMapLoaded", map.getStatus());
       this.vueInstance = vueInstance;
