@@ -5,6 +5,7 @@
       <!-- <li @click="jump('demo')">demo</li> -->
       <li @click="jump('quickStart')">快速上手</li>
       <li @click="jump('plugins')">插件的使用</li>
+      <li @click="jump('marker')">覆盖物 - Marker</li>
     </ul>
   </div>
 </template>
