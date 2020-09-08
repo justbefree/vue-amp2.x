@@ -28,6 +28,7 @@
     "@amap/amap-jsapi-loader": "0.0.4",
     "axios": "^0.20.0",
     "core-js": "^3.6.5",
+    "prismjs": "^1.21.0",
     "qs": "^6.9.4",
     "vue": "^2.6.11",
     "yn-components": "^0.4.19"
@@ -38,6 +39,7 @@
     "@vue/cli-service": "~4.4.0",
     "@vue/eslint-config-airbnb": "^5.0.2",
     "babel-eslint": "^10.1.0",
+    "babel-plugin-prismjs": "^2.0.1",
     "eslint": "^6.7.2",
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-vue": "^6.2.2",

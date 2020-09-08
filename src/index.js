@@ -2,15 +2,15 @@
 * @Author: Just be free
 * @Date:   2020-09-08 09:51:16
 * @Last Modified by:   Just be free
-* @Last Modified time: 2020-09-08 09:57:02
+* @Last Modified time: 2020-09-08 10:18:12
 * @E-mail: justbefree@126.com
 */
 
-import VueAMap2x from "./amap";
+import VueAmap2x from "./amap";
 const version = process.env["VUE_APP_VERSION"];
 const install = (Vue) => {
   if (install.installed) return;
-  Vue.component(VueAMap2x.name, VueAMap2x);
+  Vue.component(VueAmap2x.name, VueAmap2x);
 };
 if (typeof window !== "undefined" && window.Vue) {
   install(window.Vue);
@@ -18,10 +18,10 @@ if (typeof window !== "undefined" && window.Vue) {
 export {
   install,
   version,
-  VueAMap2x
+  VueAmap2x
 };
 export default {
   install,
   version,
-  VueAMap2x
+  VueAmap2x
 };
