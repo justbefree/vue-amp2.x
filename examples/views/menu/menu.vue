@@ -1,6 +1,6 @@
 <template>
   <div class="examples-container" style="text-align: center;">
-    <h1><a href="https://www.npmjs.com/package/vue-amap2.x">vue-amap2.x<sup><img width="40" :src="npmLogo"></sup></a></h1>
+    <h1><a target="_blank" href="https://www.npmjs.com/package/vue-amap2.x">vue-amap2.x<sup><img width="40" :src="npmLogo"></sup></a></h1>
     <ul>
       <!-- <li @click="jump('demo')">demo</li> -->
       <li @click="jump('quickStart')">快速上手</li>
