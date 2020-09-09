@@ -24,8 +24,12 @@
   </div>
 </template>
 <script type="text/javascript">
+  import "../../css/map.css";
   import { jscode, markupcode } from "./code";
   import { prismjsMixins } from "../../mixins/prismjs";
+  const positionIcon = require("../../assets/positioning.svg");
+  const imgDom = document.createElement("img");
+  imgDom.src = positionIcon;
   export default {
     name: "quickStart",
     mixins: [prismjsMixins],
@@ -53,6 +57,7 @@
           buttonPosition: "LB",
           //显示定位按钮，默认：true
           showButton: true,
+          buttonDom: imgDom
         });
         this.mapStatus = "正在定位当前位置";
         this.Indicator.open();
@@ -73,24 +78,3 @@
     }
   }
 </script>
-<style type="text/css">
-  .examples-container{
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    height: 568px;
-    margin-top: -284px;
-  }
-  .map-container{
-    width: 320px;
-    height: 568px;
-    border: 2px solid #efefef;
-    overflow: hidden;
-    border-radius: 8px;
-    margin:  0 auto;
-  }
-  .code-container {
-    width: 94%;
-    margin: 0 auto;
-  }
-</style>

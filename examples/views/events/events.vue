@@ -17,6 +17,7 @@
   </div>
 </template>
 <script type="text/javascript">
+  import "../../css/map.css";
   import { jscode, markupcode } from "./code";
   import { prismjsMixins } from "../../mixins/prismjs";
   export default {
@@ -63,24 +64,3 @@
     }
   }
 </script>
-<style type="text/css" scoped="scoped">
-  .examples-container{
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    height: 568px;
-    margin-top: -284px;
-  }
-  .map-container{
-    width: 320px;
-    height: 568px;
-    border: 2px solid #efefef;
-    overflow: hidden;
-    border-radius: 8px;
-    margin:  0 auto;
-  }
-  .code-container {
-    width: 94%;
-    margin: 0 auto;
-  }
-</style>

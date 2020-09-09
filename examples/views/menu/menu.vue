@@ -4,7 +4,7 @@
     <ul>
       <!-- <li @click="jump('demo')">demo</li> -->
       <li @click="jump('quickStart')">快速上手</li>
-      <li @click="jump('plugins')">插件的使用</li>
+      <li @click="jump('plugins')">插件的使用 - 定位插件</li>
       <li @click="jump('marker')">覆盖物 - Marker</li>
       <li @click="jump('events')">地图的交互与事件</li>
     </ul>
