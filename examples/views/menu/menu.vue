@@ -1,6 +1,6 @@
 <template>
   <div class="examples-container">
-    <h1 class="map"><a target="_blank" href="https://www.npmjs.com/package/vue-amap2.x">vue-amap2.x<sup><img width="50" :src="npmLogo"></sup></a></h1>
+    <h1 class="map"><a target="_blank" href="https://www.npmjs.com/package/vue-amap2.x">vue-amap2 x<sup><img width="50" :src="npmLogo"></sup></a></h1>
     <div class="install">
       <pre><code class="lang-js">{{ jscode }}</code></pre>
     </div>
@@ -41,6 +41,7 @@
     width: 200px;
     margin: 0 auto;
     list-style: none;
+    text-align: center;
   }
   ul li{ margin: 10px auto;cursor: pointer; }
   .install {
@@ -50,12 +51,12 @@
   .map {
     width: 250px;
     height: 250px;
-    line-height: 100px;
+    line-height: 245px;
     text-align: center;
     border-radius: 50%;
     background-image: url('../../assets/map.png');
     background-repeat: no-repeat;
-    background-size: 200%;
+    background-size: 122%;
     background-position: center center;
     margin: 0 auto;
   }
