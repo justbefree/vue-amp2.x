@@ -2,9 +2,11 @@
 * @Author: Just be free
 * @Date:   2020-09-09 11:40:53
 * @Last Modified by:   Just be free
-* @Last Modified time: 2020-09-09 11:46:27
+* @Last Modified time: 2020-09-09 16:14:25
 */
-
+.amap-overlay-text-container{
+  color: #aaa;
+}
 .examples-container{
   position: absolute;
   top: 25%;
