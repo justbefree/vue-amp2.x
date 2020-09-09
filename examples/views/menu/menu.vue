@@ -35,6 +35,9 @@
   }
 </script>
 <style type="text/css" scoped="scoped">
+  body {
+    background: #2d2d2d;
+  }
   ul {
     z-index: 10;
     position: relative;

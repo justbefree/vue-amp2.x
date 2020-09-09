@@ -26,16 +26,20 @@ export default {
 };
 </script>
 
-<style scoped="scoped">
+<style>
 *{
   margin: 0;
   padding: 0;
+}
+body {
+  background:  #272822;
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
+  /* color: #2c3e50; */
+  color: #f8f8f2;
   position: relative;
   height: 100%;
   width: 100%;
