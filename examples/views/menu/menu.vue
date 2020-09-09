@@ -1,7 +1,9 @@
 <template>
-  <div class="examples-container" style="text-align: center;">
-    <h1><a target="_blank" href="https://www.npmjs.com/package/vue-amap2.x">vue-amap2.x<sup><img width="40" :src="npmLogo"></sup></a></h1>
-    <div class="map"></div>
+  <div class="examples-container">
+    <h1 class="map"><a target="_blank" href="https://www.npmjs.com/package/vue-amap2.x">vue-amap2.x<sup><img width="50" :src="npmLogo"></sup></a></h1>
+    <div class="install">
+      <pre><code class="lang-js">{{ jscode }}</code></pre>
+    </div>
     <ul>
       <!-- <li @click="jump('demo')">demo</li> -->
       <li @click="jump('quickStart')">快速上手</li>
@@ -13,12 +15,16 @@
   </div>
 </template>
 <script type="text/javascript">
+  import { prismjsMixins } from "../../mixins/prismjs";
+  import { jscode } from "./code";
   const npmLogo = require("../../assets/npm.svg");
   export default {
     name: "menus",
+    mixins: [prismjsMixins],
     data() {
       return {
-        npmLogo
+        npmLogo,
+        jscode
       }
     },
     methods: {
@@ -32,18 +38,25 @@
   ul {
     z-index: 10;
     position: relative;
+    width: 200px;
+    margin: 0 auto;
+    list-style: none;
   }
   ul li{ margin: 10px auto;cursor: pointer; }
+  .install {
+    width: 340px;
+    margin: auto;
+  }
   .map {
-    z-index: 0;
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
+    line-height: 100px;
+    text-align: center;
     border-radius: 50%;
     background-image: url('../../assets/map.png');
     background-repeat: no-repeat;
     background-size: 200%;
     background-position: center center;
-    position: fixed;
-    left: 20%;
+    margin: 0 auto;
   }
 </style>
