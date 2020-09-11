@@ -48,7 +48,7 @@
   }
   ul li{ margin: 10px auto;cursor: pointer; }
   .install {
-    width: 340px;
+    width: 400px;
     margin: auto;
   }
   .map {
