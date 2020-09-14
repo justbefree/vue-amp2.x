@@ -2,7 +2,7 @@
 * @Author: Just be free
 * @Date:   2020-08-07 11:26:09
 * @Last Modified by:   Just be free
-* @Last Modified time: 2020-09-11 16:44:35
+* @Last Modified time: 2020-09-14 17:31:54
 * @E-mail: justbefree@126.com
 */
 import { loadMap } from '../load';
@@ -102,6 +102,7 @@ export default {
           zooms: [10, 19],
           center,
           touchZoomCenter: 1,
+          mapStyle: "amap://styles/light",
           ...mapOptions
         });
         this.map = map;
