@@ -2,7 +2,7 @@
 * @Author: Just be free
 * @Date:   2020-08-07 11:26:09
 * @Last Modified by:   Just be free
-* @Last Modified time: 2020-09-14 17:31:54
+* @Last Modified time: 2020-09-16 18:31:13
 * @E-mail: justbefree@126.com
 */
 import { loadMap } from '../load';
@@ -36,6 +36,10 @@ export default {
     autoDestroy: {
       type: Boolean,
       default: false
+    },
+    version: {
+      type: String,
+      default: "1.4.15"
     }
   },
   data() {
@@ -94,8 +98,8 @@ export default {
       });
     },
     load(options = {}) {
-      const { key, mapOptions } = options;
-      loadMap({ key }).then((AMap) => {
+      const { key, mapOptions, version } = options;
+      loadMap({ key, version }).then((AMap) => {
         const { center } = this;
         const map = new AMap.Map('vue-amp2x-container', {
           zoom: 13,
