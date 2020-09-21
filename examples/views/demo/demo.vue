@@ -40,7 +40,9 @@ export default {
         // 定位按钮的排放位置,  RB表示右下
         buttonPosition: "RB"
       });
-      geolocation.getCurrentPosition(function(status, result) {
+      geolocation.getCurrentPosition((status, result) => {
+        console.log("status =", status);
+        console.log("result = ", result);
         if (status === "complete") {
           console.log(result);
           const { position } = result;
@@ -102,8 +104,8 @@ export default {
     requestHotels(args = {}) {
       const params = {
         GeoId: "L00509",
-        ArrivalDate: "2020-09-08",
-        DepartureDate: "2020-09-09",
+        ArrivalDate: "2020-09-20",
+        DepartureDate: "2020-09-21",
         PageIndex: 1,
         PayType: "all",
         InvoiceType: "all",
@@ -122,7 +124,7 @@ export default {
         QueryText: "",
         lang: "zh-CN",
         QueryType: 0,
-        authenticate: "cWd2djlQYVE2TDhkbG5JeE5zKzlEVWpHZTlkV1o4VmlmWG1ESFR3OTAyY2NHUnlEMU83akdOeUNxTmJrbjJHSXdoak9RNWI3aGRHTWxBL09hQkpsMEE9PQ==",
+        authenticate: "dXhWWjRLOTBDdDEwbnA3Yy9xT1F0MzNJaVhjc3l2em5WZFVCRnAwVlpwaFpua25TQ3VMTFAvWEJDZ201aUs4dGJPelA5MG1ZVDcxbGxaMHBOS3NQRlE9PQ==",
         ...args
       };
       this.Indicator.open({
