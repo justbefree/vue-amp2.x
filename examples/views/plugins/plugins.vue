@@ -54,7 +54,7 @@
           // 定位成功后调整地图视野范围使定位位置及精度范围视野内可见，默认：false
           zoomToAccuracy: true,     
           // 定位按钮的排放位置,  RB表示右下
-          buttonPosition: "LB",
+          buttonPosition: "RB",
           //显示定位按钮，默认：true
           showButton: true,
           buttonDom: imgDom
@@ -69,6 +69,7 @@
             this.Indicator.close();
             map.setZoomAndCenter(18, position);
           } else {
+            console.log(result);
             this.mapStatus = "定位失败";
             this.Indicator.close();
           }
