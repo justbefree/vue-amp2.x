@@ -25,7 +25,7 @@
     "types/*.d.ts"
   ],
   "dependencies": {
-    "@amap/amap-jsapi-loader": "0.0.4",
+    "@amap/amap-jsapi-loader": "^1.0.1",
     "axios": "^0.20.0",
     "core-js": "^3.6.5",
     "prismjs": "^1.21.0",
