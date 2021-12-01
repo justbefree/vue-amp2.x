@@ -2,7 +2,7 @@
 * @Author: Just be free
 * @Date:   2020-08-07 11:26:09
 * @Last Modified by:   Just be free
-* @Last Modified time: 2020-09-16 18:31:13
+* @Last Modified time: 2021-12-01 16:18:38
 * @E-mail: justbefree@126.com
 */
 import { loadMap } from '../load';
@@ -15,12 +15,7 @@ export default {
       type: String,
       require: true
     },
-    center: {
-      type: Array,
-      default: () => {
-        return [116.4,39.92];
-      }
-    },
+    center: Array,
     plugins: {
       type: Array,
       default: () => {
@@ -39,7 +34,8 @@ export default {
     },
     version: {
       type: String,
-      default: "1.4.15"
+      // default: "1.4.15"
+      default: "2.0"
     }
   },
   data() {
