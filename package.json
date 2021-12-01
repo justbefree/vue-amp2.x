@@ -1,6 +1,6 @@
 {
   "name": "vue-amap2.x",
-  "version": "0.3.7",
+  "version": "2.0.0",
   "private": false,
   "main": "lib/vue-amp2.x.umd.min.js",
   "author": "just be free <justbefree@126.com>",
