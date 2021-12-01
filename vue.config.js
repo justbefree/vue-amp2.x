@@ -2,7 +2,7 @@
 * @Author: Just be free
 * @Date:   2020-09-04 11:11:59
 * @Last Modified by:   Just be free
-* @Last Modified time: 2020-09-08 16:19:21
+* @Last Modified time: 2021-12-01 15:37:08
 * @E-mail: justbefree@126.com
 */
 process.env.VUE_APP_VERSION = require('./package.json').version;
@@ -20,6 +20,7 @@ module.exports = {
     devtool: "source-map"
   },
   devServer: {
+    https: true,
     proxy: {
       "/Hotel": {
         target: "https://testtripm.51ykb.com",
